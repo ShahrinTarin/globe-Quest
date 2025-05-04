@@ -1,12 +1,22 @@
-# React + Vite
+# Globe Quest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose
+Globe Quest is a holiday plan subscription box website, similar to "Globe Insight," designed to deliver curated travel kits that inspire unique adventures and save planning time. It builds customer loyalty and recurring revenue by showcasing themed boxes through a visually engaging Swiper JS carousel while offering personalized, cost-effective holiday experiences. This demo project highlights front-end development skills, focusing on an interactive user interface for showcasing subscription options.
 
-Currently, two official plugins are available:
+## Live URL
+[https://your-live-url-here.com](https://your-live-url-here.com)  
+*(Replace with the actual deployed URL after hosting on Netlify, GitHub Pages, or another platform.)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features
+- **Swiper JS Carousel**: A 3D coverflow carousel displaying themed holiday subscription boxes (e.g., jungle, arctic, desert) with 5 slides visible, centered, and auto-playing.
+- **Responsive Design**: A clean, user-friendly layout with sections for a header, carousel, subscription plans, contact form, and footer.
+- **Static Subscription Plans**: Simulated plans with titles, prices, and "Explore Now" buttons to mimic a subscription model.
+- **Contact Form**: A simple form for user inquiries, enhancing interactivity.
+- **Branding**: Incorporates the "Globe Quest" theme to reflect global holiday adventures.
 
-## Expanding the ESLint configuration
+## NPM Packages Used
+- **swiper**: Used for creating the interactive carousel with coverflow and autoplay effects (`npm install swiper`).
+- **react**: The core library for building the user interface (`npx create-react-app`).
+- **react-dom**: Supports rendering React components in the DOM (included with Create React App).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
