@@ -10,10 +10,6 @@ const Nav = () => {
             }`} to='/'>Home</NavLink></li>
 
         <li><NavLink className={({ isActive }) =>
-            `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-amber-50 text-amber-500' : 'text-gray-700 hover:bg-gray-100'
-            }`} to={`/details/`}>Services</NavLink></li>
-
-        <li><NavLink className={({ isActive }) =>
             `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-amber-50  text-amber-500' : 'text-gray-700 hover:bg-gray-100'
             }`} to='/about'>About</NavLink></li>
         
@@ -28,7 +24,7 @@ const Nav = () => {
     </>
 
     return (
-        <div className="navbar bg-transparent shadow-md  md:px-8 lg:px-12 mb-5">
+        <div className="navbar shadow-md  md:px-8 lg:px-12 mb-5 bg-transparent">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,10 +45,10 @@ const Nav = () => {
             </div>
 
             <div className="navbar-end gap-6 flex">
-                <div className=" w-10 hidden md:flex bg-amber-100 p-3 rounded-full">
-                    <FaUserAlt />
+                <div className=" w-10 hidden md:flex bg-amber-200 p-3 rounded-full">
+                    <FaUserAlt/>
                 </div>
-                <a className="btn font-semibold">Login</a>
+                <NavLink to='/auth/login' className="btn font-semibold">Login</NavLink>
             </div>
         </div>
     );

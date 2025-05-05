@@ -5,6 +5,9 @@ import About from "../pages/About";
 import MyProfile from "../pages/MyProfile";
 import Errorpage from "../pages/Errorpage";
 import DetailsPage from "../components/DetailsPage";
+import Login from "../pages/Login";
+import AuthLayout from "../layout/AuthLayout";
+import Logout from "../pages/Logout";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +26,7 @@ const router = createBrowserRouter([
         path: '/myprofile',
         Component: MyProfile,
       },
+      
 
       {
         path: '/details/:id',
@@ -39,6 +43,20 @@ const router = createBrowserRouter([
     path: '/about',
     Component: About,
   },
+  {
+    path:'/auth',
+   Component:AuthLayout,
+   children:[
+    {
+      path: '/auth/login',
+      Component:Login ,
+    },
+    {
+      path: '/auth/logout',
+      Component:Logout ,
+    }
+   ]
+  }
 ])
 
 export default router

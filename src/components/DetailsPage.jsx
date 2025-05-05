@@ -20,21 +20,11 @@ const DetailsPage = () => {
         }
         else {
             Swal.fire({
-                title: "Your review has been Submitted...",
-                showClass: {
-                    popup: `
-            animate__animated
-            animate__fadeInUp
-            animate__faster
-          `
-                },
-                hideClass: {
-                    popup: `
-            animate__animated
-            animate__fadeOutDown
-            animate__faster
-          `
-                }
+                position: "center",
+                icon: "success",
+                title: "Your Review has been Successfully Submitted",
+                showConfirmButton: false,
+                timer: 1500
             });
         }
 
@@ -84,10 +74,13 @@ const DetailsPage = () => {
                             }
                         </div>
                         <form onSubmit={handleRatings} className='space-y-2 text-center'>
-                            <input type="text" placeholder="Add a Feedback..." className="w-full py-1 px-10 hover:border rounded text-sm pl-0 dark:text-gray-800 focus-within:bg-amber-50" required />
-                            <input type="number" placeholder="Rate the Plan..." name='rate' className="w-full py-1 px-10 hover:border rounded text-sm pl-0 dark:text-gray-800 focus-within:bg-amber-50" required />
+                            <input type="text" placeholder="Add a Feedback..." className="w-full py-1 px-10 hover:border rounded text-sm pl-4 dark:text-gray-800 focus-within:bg-amber-50" required />
+                            <input type="number" placeholder="Rate the Plan..." name='rate' className="w-full py-1 px-10 hover:border rounded text-sm pl-4 dark:text-gray-800 focus-within:bg-amber-50" required />
+
                             <button type='submit' className='cursor-pointer  hover:bg-white hover:text-black hover:border px-4 py-1 font-semibold rounded-full bg-gray-800 text-gray-100 '>Review</button>
+
                         </form>
+
                     </div>
                 </div>
             </div>

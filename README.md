@@ -5,7 +5,7 @@ Globe Quest is a holiday plan subscription box website, similar to "Globe Insigh
 
 ## Live URL
 [https://your-live-url-here.com](https://your-live-url-here.com)  
-*(Replace with the actual deployed URL after hosting on Netlify, GitHub Pages, or another platform.)*
+
 
 ## Key Features
 - **Swiper JS Carousel**: A 3D coverflow carousel displaying themed holiday subscription boxes (e.g., jungle, arctic, desert) with 5 slides visible, centered, and auto-playing.
@@ -18,5 +18,7 @@ Globe Quest is a holiday plan subscription box website, similar to "Globe Insigh
 - **swiper**: Used for creating the interactive carousel with coverflow and autoplay effects (`npm install swiper`).
 - **react**: The core library for building the user interface (`npx create-react-app`).
 - **react-dom**: Supports rendering React components in the DOM (included with Create React App).
+- **sweet-alert**: Provides a customizable, modern popup library for alerts and confirmations in web applications. Easily integrated with React to enhance user interactions with styled, animated dialogs, replacing basic browser alerts.
+- **react-icons**: Offers a collection of popular icon libraries (e.g., Font Awesome, Material Icons) as React components. Simplifies adding scalable, customizable icons to React apps, enhancing UI with minimal setup.
 
 ---

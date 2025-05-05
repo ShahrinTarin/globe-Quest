@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Card = ({card}) => {
-    const {name,thumbnail,banner,price,description,tech_category,frequency,id}=card
+    const {name,thumbnail,banner,description,tech_category,id,price,frequency}=card
     return (
         <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
 	<div className="flex space-x-4">
