@@ -1,12 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router';
-import Header from '../components/Header';
+import Nav from '../components/Nav';
+
 
 const HomeLayout = () => {
     return (
-        <div>
+        <div className='mx-2 md:w-11/12 md:mx-auto '>
             <header>
-            <Header></Header>
+            <Nav></Nav>
             </header>
             <main>
                 <Outlet></Outlet>

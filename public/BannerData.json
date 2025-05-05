@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "title": "Santorini Sunset Retreat",
+      "description": "Experience iconic whitewashed buildings and breathtaking Aegean sunsets in this Greek paradise.",
+      "img": "https://i.ibb.co.com/spp3x4tD/banner1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Alpine Mountain Cabin",
+      "description": "Cozy wooden chalet nestled in the Swiss Alps with panoramic mountain views.",
+      "img": "https://i.ibb.co.com/dsfCTzGf/banner2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Kyoto Zen Garden Stay",
+      "description": "Traditional ryokan accommodation featuring serene Japanese gardens and onsens.",
+      "img": "https://i.ibb.co.com/ycfMvtkk/banner3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Safari Wilderness Lodge",
+      "description": "Luxurious tents overlooking the Serengeti plains with daily wildlife excursions.",
+      "img": "https://i.ibb.co.com/JW3ZLVjL/banner4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Rocky Mountain Adventure",
+      "description": "Log cabin retreat in Banff National Park with access to hiking and hot springs.",
+      "img": "https://i.ibb.co.com/6R09MwrB/banner5.webp"
+    },
+    {
+      "id": 6,
+      "title": "Tropical Bali Villa",
+      "description": "Private villa with infinity pool surrounded by lush rainforest and rice terraces.",
+      "img": "https://i.ibb.co.com/3mXLNRpd/banner6.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Patagonia Explorer's Hut",
+      "description": "Rustic-chic accommodation at the edge of Torres del Paine National Park.",
+      "img": "https://i.ibb.co.com/pjHRXQ9n/banner7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Northern Lights Cabin",
+      "description": "Glass-roofed cabin in Iceland for optimal Aurora Borealis viewing.",
+      "img": "https://i.ibb.co.com/gZ0xKnkX/banner8.jpg"
+    }
+  ]

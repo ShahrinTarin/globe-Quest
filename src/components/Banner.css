@@ -1,0 +1,119 @@
+.banner {
+    padding: 10px;
+    background: #1a1a1a;
+}
+
+.banner .swiper {
+    height: 70vh;
+}
+
+.banner .swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.banner .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.banner-content h3 {
+    margin: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.banner-content p {
+    margin: 3px 0 0;
+    font-size: 0.7rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 360px) {
+    .banner {
+        padding: 5px;
+    }
+
+    .banner .swiper {
+        height: 70vh; 
+    }
+
+    .banner-content {
+        bottom: 3px;
+        padding: 3px;
+    }
+
+    .banner-content h3 {
+        font-size: 0.85rem;
+    }
+
+    .banner-content p {
+        font-size: 0.55rem; 
+        -webkit-line-clamp: 1; 
+    }
+}
+
+@media (min-width: 361px) and (max-width: 640px) {
+    .banner .swiper {
+        height: 70vh;
+    }
+
+    .banner-content h3 {
+        font-size: 1rem;
+    }
+
+    .banner-content p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .banner .swiper {
+        height: 70vh;
+    }
+
+    .banner-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .banner-content p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .banner .swiper {
+        height: 70vh;
+    }
+
+    .banner-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .banner-content p {
+        font-size: 0.9rem;
+    }
+}
