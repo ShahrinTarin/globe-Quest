@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import { EffectCoverflow, Autoplay } from 'swiper/modules';
+import { EffectCoverflow, Autoplay} from 'swiper/modules';
 import './Banner.css';
 
 const Banner = () => {
@@ -35,49 +35,51 @@ const Banner = () => {
     if (error) return <p>Error: {error}</p>;
 
     return (
-        <div className="banner rounded-xl mb-12">
+        <div className="drop-shadow-lg backdrop-blur-2xl banner rounded-xl mb-12">
             <Swiper
                 modules={[EffectCoverflow, Autoplay]}
-                slidesPerView={3}
+                slidesPerView={2}
                 spaceBetween={10}
                 centeredSlides={true}
                 loop={true}
                 effect="coverflow"
                 coverflowEffect={{
-                    rotate: 20,
+                    rotate: 10,
                     stretch: 0,
-                    depth: 100,
-                    modifier: 1,
+                    depth: 50,
+                    modifier: 2,
                     slideShadows: false,
                 }}
+
+
                 grabCursor={true}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                autoplay={{ delay: 2000, disableOnInteraction: false }}
                 breakpoints={{
-                    0: { // Screens <= 360px
-                        slidesPerView: 1, // Force 1 slide
+                    0: { 
+                        slidesPerView: 1,
                         spaceBetween: 5,
                     },
-                    361: { // Screens between 361px and 640px
+                    361: {
                         slidesPerView: 2,
                         spaceBetween: 10,
                     },
-                    641: { // Screens between 641px and 1024px
-                        slidesPerView: 3,
+                    641: { 
+                        slidesPerView: 2,
                         spaceBetween: 15,
                     },
-                    1025: { // Screens between 1025px and 1280px
+                    1025: { 
                         slidesPerView: 3,
                         spaceBetween: 10,
                     },
-                    1281: { // Screens > 1280px
-                        slidesPerView: 4,
+                    1281: {
+                        slidesPerView: 3,
                         spaceBetween: 10,
                     },
                 }}
             >
                 {bannerData.map((item) => (
                     <SwiperSlide key={item.id}>
-                        <img
+                        <img className='shadow-2xl'
                             src={item.img}
                             alt={item.title}
                             style={{
