@@ -35,7 +35,7 @@ const Banner = () => {
     if (error) return <p>Error: {error}</p>;
 
     return (
-        <div className="banner rounded-xl">
+        <div className="banner rounded-xl mb-12">
             <Swiper
                 modules={[EffectCoverflow, Autoplay]}
                 slidesPerView={3}

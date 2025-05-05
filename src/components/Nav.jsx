@@ -14,11 +14,14 @@ const links = <>
     <li><NavLink className={({ isActive }) =>
         `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-blue-50 text-blue-600' : 'text-gray-700 hover:bg-gray-100'
         }`} to='/myprofile'>My Profile</NavLink></li>
+    <li><NavLink className={({ isActive }) =>
+        `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-blue-50 text-blue-600' : 'text-gray-700 hover:bg-gray-100'
+        }`} to='/contactus'>Contact Us</NavLink></li>
 
 </>
 
     return (
-        <div className="navbar bg-transparent shadow-md  md:px-8 lg:px-12 mb-8">
+        <div className="navbar bg-transparent shadow-md  md:px-8 lg:px-12 mb-5">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,7 +33,7 @@ const links = <>
                         {links}
                     </ul>
                 </div>
-                <NavLink to='/' className="text-2xl font-bold">Globe Quest</NavLink>
+                <NavLink to='/' className="text-2xl font-bold"><span className='text-amber-500'>Globe</span> Quest</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

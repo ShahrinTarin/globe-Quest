@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "name": "Santorini Sunset Retreat",
+        "thumbnail": "https://i.postimg.cc/6ptmTXDg/thumbnail1.jpg",
+        "banner": "https://i.ibb.co/spp3x4tD/banner1.jpg",
+        "price": 29.99,
+        "description": "Experience iconic whitewashed buildings and breathtaking Aegean sunsets in this Greek paradise.",
+        "tech_category": [
+            "Beach Getaway",
+            "Cultural Exploration",
+            "Romantic Retreat"
+        ],
+        "subscription_benefits": [
+            "Monthly Travel Guides",
+            "Exclusive Santorini Discounts",
+            "Early Access to New Retreats"
+        ],
+        "features": [
+            "Greek Culture Kit",
+            "Sunset Cruise Voucher",
+            "Local Wine Tasting Guide"
+        ],
+        "ratings": 4.8,
+        "number_of_reviews": 315
+    },
+    {
+        "id": 2,
+        "name": "Alpine Mountain Cabin",
+        "thumbnail": "https://i.postimg.cc/v8nqzTyC/thumbnail2.jpg",
+        "banner": "https://i.ibb.co/dsfCTzGf/banner2.jpg",
+        "price": 39.99,
+        "description": "Cozy wooden chalet nestled in the Swiss Alps with panoramic mountain views.",
+        "tech_category": [
+            "Mountain Adventure",
+            "Winter Escape",
+            "Nature Retreat"
+        ],
+        "subscription_benefits": [
+            "Seasonal Alpine Gear",
+            "Exclusive Ski Resort Deals",
+            "Early Access to Winter Events"
+        ],
+        "features": [
+            "Winter Hiking Map",
+            "Thermal Blanket",
+            "Guided Snowshoe Tour"
+        ],
+        "ratings": 4.7,
+        "number_of_reviews": 280
+    },
+    {
+        "id": 3,
+        "name": "Kyoto Zen Garden Stay",
+        "thumbnail": "https://i.postimg.cc/j57XZgpy/thumbnail3.jpg",
+        "banner": "https://i.ibb.co/ycfMvtkk/banner3.jpg",
+        "price": 34.99,
+        "description": "Traditional ryokan accommodation featuring serene Japanese gardens and onsens.",
+        "tech_category": [
+            "Cultural Immersion",
+            "Zen Retreat",
+            "Hot Spring Experience"
+        ],
+        "subscription_benefits": [
+            "Monthly Japanese Culture Kits",
+            "Exclusive Onsen Access",
+            "Early Access to Kyoto Events"
+        ],
+        "features": [
+            "Tea Ceremony Kit",
+            "Zen Meditation Guide",
+            "Onsen Bath Essentials"
+        ],
+        "ratings": 4.9,
+        "number_of_reviews": 350
+    },
+    {
+        "id": 4,
+        "name": "Safari Wilderness Lodge",
+        "thumbnail": "https://i.postimg.cc/BQsgBCM1/thumbnail4.webp",
+        "banner": "https://i.ibb.co/JW3ZLVjL/banner4.jpg",
+        "price": 49.99,
+        "description": "Luxurious tents overlooking the Serengeti plains with daily wildlife excursions.",
+        "tech_category": [
+            "Safari Adventure",
+            "Wildlife Exploration",
+            "Luxury Camping"
+        ],
+        "subscription_benefits": [
+            "Monthly Safari Guides",
+            "Exclusive Wildlife Tours",
+            "Early Access to Safari Packages"
+        ],
+        "features": [
+            "Safari Survival Kit",
+            "Wildlife Photography Guide",
+            "Binoculars for Viewing"
+        ],
+        "ratings": 4.6,
+        "number_of_reviews": 290
+    },
+    {
+        "id": 5,
+        "name": "Rocky Mountain Adventure",
+        "thumbnail": "https://i.postimg.cc/Gm4QM5fh/thumbnail5.webp",
+        "banner": "https://i.ibb.co/6R09MwrB/banner5.webp",
+        "price": 19.99,
+        "description": "Log cabin retreat in Banff National Park with access to hiking and hot springs.",
+        "tech_category": [
+            "Mountain Escape",
+            "Hiking Adventure",
+            "Hot Spring Retreat"
+        ],
+        "subscription_benefits": [
+            "Monthly Hiking Gear",
+            "Exclusive Banff Discounts",
+            "Early Access to New Trails"
+        ],
+        "features": [
+            "Hiking Trail Map",
+            "Portable Water Filter",
+            "Hot Spring Spa Voucher"
+        ],
+        "ratings": 4.5,
+        "number_of_reviews": 260
+    },
+    {
+        "id": 6,
+        "name": "Tropical Bali Villa",
+        "thumbnail": "https://i.postimg.cc/bwfJMGCD/thumbnail6.jpg",
+        "banner": "https://i.ibb.co/3mXLNRpd/banner6.jpg",
+        "price": 44.99,
+        "description": "Private villa with infinity pool surrounded by lush rainforest and rice terraces.",
+        "tech_category": [
+            "Tropical Getaway",
+            "Luxury Villa Stay",
+            "Nature Immersion"
+        ],
+        "subscription_benefits": [
+            "Monthly Bali Travel Kits",
+            "Exclusive Villa Discounts",
+            "Early Access to Bali Events"
+        ],
+        "features": [
+            "Tropical Spa Kit",
+            "Cultural Dance Workshop",
+            "Rice Terrace Tour Guide"
+        ],
+        "ratings": 4.8,
+        "number_of_reviews": 320
+    },
+    {
+        "id": 7,
+        "name": "Patagonia Explorer's Hut",
+        "thumbnail": "https://i.postimg.cc/59vjmqpd/thumbnail7.avif",
+        "banner": "https://i.ibb.co/pjHRXQ9n/banner7.jpg",
+        "price": 54.99,
+        "description": "Rustic-chic accommodation at the edge of Torres del Paine National Park.",
+        "tech_category": [
+            "Patagonia Adventure",
+            "Hiking Retreat",
+            "Remote Escape"
+        ],
+        "subscription_benefits": [
+            "Monthly Patagonia Guides",
+            "Exclusive Hiking Tours",
+            "Early Access to New Expeditions"
+        ],
+        "features": [
+            "Patagonia Trekking Map",
+            "Weatherproof Journal",
+            "Guided Glacier Hike"
+        ],
+        "ratings": 4.7,
+        "number_of_reviews": 300
+    },
+    {
+        "id": 8,
+        "name": "Northern Lights Cabin",
+        "thumbnail": "https://i.postimg.cc/25vgt6t6/thumbnail8.jpg",
+        "banner": "https://i.ibb.co/gZ0xKnkX/banner8.jpg",
+        "price": 59.99,
+        "description": "Glass-roofed cabin in Iceland for optimal Aurora Borealis viewing.",
+        "tech_category": [
+            "Aurora Experience",
+            "Winter Retreat",
+            "Unique Stay"
+        ],
+        "subscription_benefits": [
+            "Monthly Iceland Travel Kits",
+            "Exclusive Aurora Tours",
+            "Early Access to Cabin Bookings"
+        ],
+        "features": [
+            "Aurora Viewing Guide",
+            "Thermal Sleeping Bag",
+            "Northern Lights Photo Tips"
+        ],
+        "ratings": 4.9,
+        "number_of_reviews": 340
+    }
+]
