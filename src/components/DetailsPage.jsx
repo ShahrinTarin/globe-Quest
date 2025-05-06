@@ -9,26 +9,10 @@ const DetailsPage = () => {
     const { name, thumbnail, banner, price, description, tech_category, frequency, subscription_benefits, features } = singlecard
     const handleRatings = (e) => {
         e.preventDefault()
-        const rate = e.target.rate.value;
-        if (rate > 5) {
-            Swal.fire({
-                icon: "error",
-                title: "Invalid Ratings",
-                text: "You Can Rate between (1-5)...",
-
-            });
-        }
-        else {
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Your Review has been Successfully Submitted",
-                showConfirmButton: false,
-                timer: 1500
-            });
-        }
-
-
+        Swal.fire({
+            icon: "success",
+            title: "Your Review has been Submitted!",
+        });
     }
     return (
         <div className='flex  w-140 shadow-lg mx-auto mt-7 mb-10 md:mb-16 '>
@@ -75,9 +59,17 @@ const DetailsPage = () => {
                         </div>
                         <form onSubmit={handleRatings} className='space-y-2 text-center'>
                             <input type="text" placeholder="Add a Feedback..." className="w-full py-1 px-10 hover:border rounded text-sm pl-4 dark:text-gray-800 focus-within:bg-amber-50" required />
-                            <input type="number" placeholder="Rate the Plan..." name='rate' className="w-full py-1 px-10 hover:border rounded text-sm pl-4 dark:text-gray-800 focus-within:bg-amber-50" required />
+                            <div className="rating mb-5">
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="2 star" defaultChecked />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="3 star" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="4 star" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+                            </div>
 
-                            <button type='submit' className='cursor-pointer  hover:bg-white hover:text-black hover:border px-4 py-1 font-semibold rounded-full bg-gray-800 text-gray-100 '>Review</button>
+                            <div>
+                                <button type='submit' className='cursor-pointer  hover:bg-white hover:text-black hover:border px-4 py-1 font-semibold rounded-full bg-gray-800 text-gray-100 '>Review</button>
+                            </div>
 
                         </form>
 

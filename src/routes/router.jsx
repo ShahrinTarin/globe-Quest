@@ -11,6 +11,7 @@ import Register from "../pages/Register";
 import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../components/Loading";
 import ForgotPage from "../pages/forgotPage";
+import Updateprof from "../pages/Updateprof";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: '/auth/forget',
         Component: ForgotPage,
+      },
+      {
+        path: '/auth/updateprofile',
+        Component: Updateprof,
       }
     ]
   }

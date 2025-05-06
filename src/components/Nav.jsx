@@ -61,7 +61,7 @@ const Nav = () => {
             </div>
 
             <div className="navbar-end gap-6 flex">
-                <p className='font-medium'> {user && user.displayName}</p>
+                <p className='font-medium'> {user && user.email}</p>
                 <div className='avatar'>
                     <div className='w-10 rounded-full'>
                     <img  src={
