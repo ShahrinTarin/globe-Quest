@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import { EffectCoverflow, Autoplay} from 'swiper/modules';
 import './Banner.css';
+import Loading from './Loading';
 
 const Banner = () => {
     const [bannerData, setBannerData] = useState([]);
@@ -31,7 +32,7 @@ const Banner = () => {
             });
     }, []);
 
-    if (loading) return <span className="loading loading-dots loading-xl m-40 md:m-50 lg:m-70 "></span>;
+    if (loading) return <Loading></Loading>
     if (error) return <p>Error: {error}</p>;
 
     return (
