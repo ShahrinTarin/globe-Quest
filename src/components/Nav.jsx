@@ -1,9 +1,25 @@
-import React from 'react';
-import { FaUserAlt } from 'react-icons/fa';
+import React, { use } from 'react';
 import { NavLink } from 'react-router';
-
+import { AuthContext } from '../provider/AuthProvider';
+import userIcon from '../assets/user.png'
+import Swal from 'sweetalert2'
 const Nav = () => {
-   
+    const { user, logOut } = use(AuthContext)
+
+    const handleLogOut = () => {
+        logOut().then(() => {
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "You Logged Out Successfully",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }).catch(() => {
+            // An error happened.
+        });
+    }
+
     const links = <>
         <li><NavLink className={({ isActive }) =>
             `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-amber-50  text-amber-500' : 'text-gray-700 hover:bg-gray-100'
@@ -12,11 +28,11 @@ const Nav = () => {
         <li><NavLink className={({ isActive }) =>
             `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-amber-50  text-amber-500' : 'text-gray-700 hover:bg-gray-100'
             }`} to='/about'>About</NavLink></li>
-        
+
         <li><NavLink className={({ isActive }) =>
             `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-amber-50 text-amber-500' : 'text-gray-700 hover:bg-gray-100'
             }`} to='/contactus'>Contact Us</NavLink></li>
-        
+
         <li><NavLink className={({ isActive }) =>
             `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-amber-50 text-amber-500' : 'text-gray-700 hover:bg-gray-100'
             }`} to='/myprofile'>My Profile</NavLink></li>
@@ -45,10 +61,18 @@ const Nav = () => {
             </div>
 
             <div className="navbar-end gap-6 flex">
-                <div className=" w-10 hidden md:flex bg-amber-200 p-3 rounded-full">
-                    <FaUserAlt/>
+                <p className='font-medium'>{user && user.email}</p>
+                <div>
+                    <img className='w-12 hidden md:flex rounded-full"' src={
+                        user ? user.photoURL : userIcon
+
+
+                    } alt="" />
                 </div>
-                <NavLink to='/auth/login' className="btn font-semibold">Login</NavLink>
+                {
+                    user ? <button onClick={handleLogOut} className='btn font-semibold'>LogOut</button> : <NavLink to='/auth/login' className="btn font-semibold">Login</NavLink>
+                }
+
             </div>
         </div>
     );

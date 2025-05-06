@@ -31,7 +31,7 @@ const DetailsPage = () => {
 
     }
     return (
-        <div className='flex  w-120 shadow-lg mx-auto my-10 md:my-16 '>
+        <div className='flex  w-140 shadow-lg mx-auto mt-7 mb-10 md:mb-16 '>
             <div className="py-4 rounded-md shadow-md  bg-gray-50 text-gray-800">
                 <div className="flex items-center justify-between p-3">
                     <div className="flex items-center space-x-2">

@@ -7,7 +7,9 @@ import Errorpage from "../pages/Errorpage";
 import DetailsPage from "../components/DetailsPage";
 import Login from "../pages/Login";
 import AuthLayout from "../layout/AuthLayout";
-import Logout from "../pages/Logout";
+import Register from "../pages/Register";
+import PrivateRoute from "../provider/PrivateRoute";
+import Loading from "../components/Loading";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         loader: () => fetch('/Service.json'),
-        hydrateFallbackElement: <span className="loading loading-dots loading-xl"></span>,
+        hydrateFallbackElement: <Loading></Loading>,
         Component: Home,
 
       },
@@ -26,13 +28,13 @@ const router = createBrowserRouter([
         path: '/myprofile',
         Component: MyProfile,
       },
-      
+
 
       {
         path: '/details/:id',
         loader: () => fetch('/Service.json'),
-        hydrateFallbackElement: <span className="loading loading-dots loading-xl"></span>,
-        Component: DetailsPage,
+        hydrateFallbackElement: <Loading></Loading>,
+        element: <PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>
       },
 
 
@@ -44,18 +46,18 @@ const router = createBrowserRouter([
     Component: About,
   },
   {
-    path:'/auth',
-   Component:AuthLayout,
-   children:[
-    {
-      path: '/auth/login',
-      Component:Login ,
-    },
-    {
-      path: '/auth/logout',
-      Component:Logout ,
-    }
-   ]
+    path: '/auth',
+    Component: AuthLayout,
+    children: [
+      {
+        path: '/auth/login',
+        Component: Login,
+      },
+      {
+        path: '/auth/register',
+        Component: Register,
+      }
+    ]
   }
 ])
 
