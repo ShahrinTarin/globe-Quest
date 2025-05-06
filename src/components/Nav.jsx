@@ -35,6 +35,10 @@ const Nav = () => {
 
         <li><NavLink className={({ isActive }) =>
             `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-amber-50 text-amber-500' : 'text-gray-700 hover:bg-gray-100'
+            }`} to='/faq'>FAQ</NavLink></li>
+
+        <li><NavLink className={({ isActive }) =>
+            `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-amber-50 text-amber-500' : 'text-gray-700 hover:bg-gray-100'
             }`} to='/myprofile'>My Profile</NavLink></li>
 
     </>
@@ -61,8 +65,8 @@ const Nav = () => {
             </div>
 
             <div className="navbar-end gap-6 flex">
-                <p className='font-medium text-sm'> Hi,  <span className='text-amber-600 font-bold text-lg'>{user && user.displayName}</span></p>
-                <div className="tooltip tooltip-bottom tooltip-info" data-tip={user && user.displayName}>
+                <p className='text-amber-600 font-semibold text-lg'> {user && user.email}</p>
+                <div className="tooltip tooltip-bottom tooltip-warning" data-tip={user && user.displayName}>
                 <div className='avatar'>
                     <div className='w-10 rounded-full cursor-pointer'>
                     <img  src={

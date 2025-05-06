@@ -1,12 +1,21 @@
-import React, { use, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import Swal from 'sweetalert2'
 import { FaEye } from 'react-icons/fa6';
 import { FaEyeSlash } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 const Register = () => {
     const { createUser, setUser, googleLogIn, updateUser } = use(AuthContext)
+    const [pageTitle, setPageTitle] = useState('Globe Quest');
+    
+        useEffect(() => {
+        const newTitle = 'Register';
+            setPageTitle(newTitle);
+            document.title = newTitle;
+      
+        }, [])
     const [error, setError] = useState('')
     const [showPass, setShowPass] = useState(false)
     const navigate = useNavigate()
@@ -98,6 +107,9 @@ const Register = () => {
     }
     return (
         <div className="w-full mb-5 max-w-lg mx-auto p-8 space-y-3 rounded-xl bg-gray-600 text-gray-100 shadow-2xl">
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
             <h1 className="text-2xl font-bold text-center">Register Your Account</h1>
             <form onSubmit={handleRegister} className="space-y-2">
                 <div className="space-y-1 text-sm">

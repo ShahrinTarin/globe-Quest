@@ -1,13 +1,26 @@
-import React, { use } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { Link } from 'react-router';
+import { Helmet } from 'react-helmet-async';
 
 
 const MyProfile = () => {
   const { user } = use(AuthContext)
+  const [pageTitle, setPageTitle] = useState('Globe Quest');
+  
+      useEffect(() => {
+      const newTitle = 'My Profile';
+          setPageTitle(newTitle);
+          document.title = newTitle;
+    
+      }, [])
   
   return (
-    <div className='w-11/12 mx-auto flex flex-col md:flex-row py-8'>
+    <div>
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
+      <div className='w-11/12 mx-auto flex flex-col md:flex-row py-8'>
       <div>
         <img src="https://i.ibb.co.com/2YpXbGD1/profile.gif" alt="gif" />
       </div>
@@ -34,9 +47,10 @@ const MyProfile = () => {
 
         </div>
         <div>
-        <Link to='/auth/updateprofile'><button className="btn btn-neutral btn-outline text-gray-600 hover:text-white">Update Profile</button></Link>
+        <Link to='/auth/updateprofile'><button className="btn btn-neutral  btn-outline text-gray-600 hover:text-white">Update Profile</button></Link>
         </div>
       </div>
+    </div>
     </div>
   );
 };

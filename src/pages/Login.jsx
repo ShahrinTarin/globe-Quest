@@ -1,11 +1,20 @@
-import React, { use, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import Swal from 'sweetalert2'
 import { FaEye } from 'react-icons/fa6';
 import { FaEyeSlash } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 const Login = () => {
+    const [pageTitle, setPageTitle] = useState('Globe Quest');
+    
+        useEffect(() => {
+        const newTitle = 'LogIn';
+            setPageTitle(newTitle);
+            document.title = newTitle;
+      
+        }, [])
     const { signIn, setUser, googleLogIn } = use(AuthContext)
 
     const [error, setError] = useState('')
@@ -65,6 +74,9 @@ const Login = () => {
 
     return (
         <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-gray-600 text-gray-100 mb-5 shadow-2xl">
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
             <h1 className="text-2xl font-bold text-center">Login</h1>
             <form onSubmit={handleLogIn} className="space-y-2">
                 <div className="space-y-1 text-sm">

@@ -1,5 +1,5 @@
 # Globe Quest
-
+# Live URL : https://globe-quest-77b62.web.app/
 ## Purpose
 Globe Quest is a holiday plan subscription box website, similar to "Globe Insight," designed to deliver curated travel kits that inspire unique adventures and save planning time. It builds customer loyalty and recurring revenue by showcasing themed boxes through a visually engaging Swiper JS carousel while offering personalized, cost-effective holiday experiences. This demo project highlights front-end development skills, focusing on an interactive user interface for showcasing subscription options.
 

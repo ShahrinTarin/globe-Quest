@@ -1,8 +1,18 @@
-import React, { use } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet-async';
 const ForgotPage = () => {
     const { resetPassword} = use(AuthContext)
+
+    const [pageTitle, setPageTitle] = useState('Globe Quest');
+    
+        useEffect(() => {
+        const newTitle = 'Forgot Page';
+            setPageTitle(newTitle);
+            document.title = newTitle;
+      
+        }, [])
 
     const handleResetPassword = (e) => {
         e.preventDefault()
@@ -32,6 +42,9 @@ const ForgotPage = () => {
     }
     return (
         <div className="w-full max-w-md mx-auto p-10 space-y-3 rounded-xl bg-gray-600 text-gray-100 mb-5 shadow-2xl">
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
             <h1 className="text-2xl font-bold text-center mb-5">Reset Your Password
             </h1>
             <form onSubmit={handleResetPassword} className="space-y-6">

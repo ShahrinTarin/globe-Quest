@@ -12,6 +12,7 @@ import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../components/Loading";
 import ForgotPage from "../pages/forgotPage";
 import Updateprof from "../pages/Updateprof";
+import Faq from "../pages/Faq";
 
 const router = createBrowserRouter([
   {
@@ -28,9 +29,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/myprofile',
-       element:<PrivateRoute>
-        <MyProfile></MyProfile>
-       </PrivateRoute>
+        element: <PrivateRoute>
+          <MyProfile></MyProfile>
+        </PrivateRoute>
       },
 
 
@@ -50,6 +51,12 @@ const router = createBrowserRouter([
     Component: About,
   },
   {
+    path: '/faq',
+    element:<PrivateRoute>
+      <Faq></Faq>
+    </PrivateRoute>
+  },
+  {
     path: '/auth',
     Component: AuthLayout,
     children: [
@@ -67,7 +74,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/auth/updateprofile',
-        Component: Updateprof,
+        element: <PrivateRoute>
+          <Updateprof></Updateprof>
+        </PrivateRoute>
       }
     ]
   }

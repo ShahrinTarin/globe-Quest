@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link, useRouteError } from 'react-router';
 
 
 const Errorpage = () => {
+    const [pageTitle, setPageTitle] = useState('Globe Quest');
+    
+        useEffect(() => {
+        const newTitle = 'Error Page';
+            setPageTitle(newTitle);
+            document.title = newTitle;
+      
+        }, [])
     const error = useRouteError()
     return (
         <>
             <div className='py-24 text-center'>
+                <Helmet>
+                    <title>{pageTitle}</title>
+                </Helmet>
                 <h1 className='mb-8 text-5xl font-semibold  text-amber-500'>
                     {error?.status || 404} - Page not found
                 </h1>
