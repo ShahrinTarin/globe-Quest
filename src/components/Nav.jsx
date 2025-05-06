@@ -61,13 +61,15 @@ const Nav = () => {
             </div>
 
             <div className="navbar-end gap-6 flex">
-                <p className='font-medium'> {user && user.email}</p>
+                <p className='font-medium text-sm'> Hi,  <span className='text-amber-600 font-bold text-lg'>{user && user.displayName}</span></p>
+                <div className="tooltip tooltip-bottom tooltip-info" data-tip={user && user.displayName}>
                 <div className='avatar'>
-                    <div className='w-10 rounded-full'>
+                    <div className='w-10 rounded-full cursor-pointer'>
                     <img  src={
                         user ? user.photoURL : userIcon
                     } alt="User Photo" />
                     </div>
+                </div>
                 </div>
                 {
                     user ? <button onClick={handleLogOut} className='btn font-semibold'>LogOut</button> : <NavLink to='/auth/login' className="btn font-semibold">Login</NavLink>
