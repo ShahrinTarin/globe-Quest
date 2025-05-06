@@ -61,13 +61,13 @@ const Nav = () => {
             </div>
 
             <div className="navbar-end gap-6 flex">
-                <p className='font-medium'>{user && user.email}</p>
-                <div>
-                    <img className='w-12 hidden md:flex rounded-full"' src={
+                <p className='font-medium'> {user && user.displayName}</p>
+                <div className='avatar'>
+                    <div className='w-10 rounded-full'>
+                    <img  src={
                         user ? user.photoURL : userIcon
-
-
-                    } alt="" />
+                    } alt="User Photo" />
+                    </div>
                 </div>
                 {
                     user ? <button onClick={handleLogOut} className='btn font-semibold'>LogOut</button> : <NavLink to='/auth/login' className="btn font-semibold">Login</NavLink>

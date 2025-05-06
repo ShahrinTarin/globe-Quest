@@ -10,6 +10,7 @@ import AuthLayout from "../layout/AuthLayout";
 import Register from "../pages/Register";
 import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../components/Loading";
+import ForgotPage from "../pages/forgotPage";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/myprofile',
-        Component: MyProfile,
+       element:<PrivateRoute>
+        <MyProfile></MyProfile>
+       </PrivateRoute>
       },
 
 
@@ -56,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: '/auth/register',
         Component: Register,
+      },
+      {
+        path: '/auth/forget',
+        Component: ForgotPage,
       }
     ]
   }

@@ -3,15 +3,18 @@ import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import Swal from 'sweetalert2'
+import { FaEye } from 'react-icons/fa6';
+import { FaEyeSlash } from 'react-icons/fa';
 const Login = () => {
     const { signIn, setUser, googleLogIn } = use(AuthContext)
 
     const [error, setError] = useState('')
-
+    const [showPass, setShowPass] = useState(false)
     const location = useLocation()
     const navigate = useNavigate()
     const handleGoogleLogIn = () => {
         googleLogIn()
+        setError('')
             .then((result) => {
                 const user = result.user
                 setUser(user)
@@ -35,6 +38,8 @@ const Login = () => {
         e.preventDefault()
         const password = e.target.password.value
         const email = e.target.email.value
+
+
         signIn(email, password)
             .then((result) => {
                 const user = result.user
@@ -59,24 +64,31 @@ const Login = () => {
     }
 
     return (
-        <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-gray-600 text-gray-100 shadow-2xl">
+        <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-gray-600 text-gray-100 mb-5 shadow-2xl">
             <h1 className="text-2xl font-bold text-center">Login</h1>
             <form onSubmit={handleLogIn} className="space-y-2">
                 <div className="space-y-1 text-sm">
-                    <label htmlFor="email" className="block dark:text-gray-600">Email</label>
+                    <label htmlFor="email" className="block dark:text-gray-100">Email</label>
                     <input required type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                 </div>
-                <div className="space-y-1 text-sm">
-                    <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                    <input required type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
-                    <div className="flex justify-end text-xs dark:text-gray-600">
-                        <a rel="noopener noreferrer" href="#">Forgot Password?</a>
-                    </div>
+                <div className="space-y-1 text-sm relative">
+                    <label htmlFor="password" className="block dark:text-gray-100">Password</label>
+                    <input required
+                        type={showPass ? 'text' : 'password'}
+                        name="password"
+                        id="password"
+                        placeholder="Password"
+                        className="w-full mb-3 px-4 py-3 cursor-pointer rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                    <button onClick={() => setShowPass(!showPass)} className='text-gray-700 absolute  top-9 right-4'>{showPass ? <FaEyeSlash size={16}></FaEyeSlash> : <FaEye size={16}></FaEye>}</button>
+
+                </div>
+                <div className="flex justify-end text-xs text-gray-100">
+                    <Link rel="noopener noreferrer" to='/auth/forget'>Forgot Password?</Link>
                 </div>
 
-                 {error&&<p className='text-xs text-error'>{error}</p>}
-               
-                <button type='submit' className="block w-full p-3 text-center rounded-sm text-gray-50 bg-amber-600">Sign in</button>
+                {error && <p className='text-xs text-error'>{error}</p>}
+
+                <button type='submit' className="block w-full p-3 text-center rounded-sm cursor-pointer text-gray-50 bg-amber-600">Sign in</button>
                 <div className="flex items-center w-full my-4">
                     <hr className="w-full text-gray-100" />
                     <p className="px-3 text-gray-100">OR</p>
