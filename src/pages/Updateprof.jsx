@@ -56,7 +56,7 @@ const Updateprof = () => {
 				<div className="flex items-center mt-6 pt-4 space-x-1">
 					<div className="flex-1  h-px sm:w-16 bg-gray-300"></div>
 					<p className="px-3 text-sm text-gray-600 flex"><IoFlowerOutline /><IoFlowerOutline /><IoFlowerOutline /><IoFlowerOutline /></p>
-					<div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
+					<div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
 				</div>
 
 			</div>
