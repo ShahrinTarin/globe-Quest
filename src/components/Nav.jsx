@@ -65,7 +65,7 @@ const Nav = () => {
             </div>
 
             <div className="navbar-end gap-6 flex">
-                <p className='text-amber-600 w-sm font-semibold hidden md:block text-lg'> {user && user.email}</p>
+                <p className='text-amber-600 font-semibold hidden md:block text-lg'> {user && user.email}</p>
                 <div className="tooltip tooltip-bottom tooltip-warning" data-tip={user && user.displayName}>
                 <div className='avatar'>
                     <div className='w-10 rounded-full cursor-pointer'>
