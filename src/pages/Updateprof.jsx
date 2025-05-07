@@ -42,12 +42,12 @@ const Updateprof = () => {
 				<h1 className="text-2xl font-bold text-center underline">Update Your Profile</h1>
 				<form  onSubmit={handleUpdate} className="space-y-10">
 					<div className="space-y-1 text-sm">
-						<label htmlFor="username" className="block dark:text-gray-600">Name</label>
-						<input required type="text" name="name" id="Name" placeholder="Name" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+						<label htmlFor="username" className="block text-gray-600">Name</label>
+						<input required type="text" name="name" id="Name" placeholder="Name" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" />
 					</div>
 					<div className="space-y-1 text-sm">
-						<label htmlFor="Photo URL" className="block dark:text-gray-600">Photo URL</label>
-						<input required type="text" name="photoURL" id="photoURL" placeholder="Photo URL" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+						<label htmlFor="Photo URL" className="block text-gray-600">Photo URL</label>
+						<input required type="text" name="photoURL" id="photoURL" placeholder="Photo URL" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" />
 					</div>
 					{error && <p className='text-sm text-error'>{error}</p>}
 					<button className="block hover:bg-white hover:text-gray-700 hover:outline-1 w-full p-3 text-center rounded-sm text-gray-50 cursor-pointer bg-amber-600" type='submit'>Update Information</button>

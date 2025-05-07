@@ -113,32 +113,32 @@ const Register = () => {
             <h1 className="text-2xl font-bold text-center">Register Your Account</h1>
             <form onSubmit={handleRegister} className="space-y-2">
                 <div className="space-y-1 text-sm">
-                    <label htmlFor="username" className="block dark:text-gray-100">Name</label>
-                    <input required type="text" name="name" id="Name" placeholder="Name" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                    <label htmlFor="username" className="block text-gray-100">Name</label>
+                    <input required type="text" name="name" id="Name" placeholder="Name" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" />
                 </div>
                 <div className="space-y-1 text-sm">
-                    <label htmlFor="Photo URL" className="block dark:text-gray-100">Photo URL</label>
-                    <input required type="text" name="photoURL" id="photoURL" placeholder="Photo URL" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                    <label htmlFor="Photo URL" className="block text-gray-100">Photo URL</label>
+                    <input required type="text" name="photoURL" id="photoURL" placeholder="Photo URL" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" />
                 </div>
                 <div className="space-y-1 text-sm">
-                    <label htmlFor="email" className="block dark:text-gray-100">Email</label>
-                    <input required type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                    <label htmlFor="email" className="block text-gray-100">Email</label>
+                    <input required type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" />
                 </div>
                 <div className="space-y-1 text-sm relative">
-                    <label htmlFor="password" className="block dark:text-gray-100">Password</label>
+                    <label htmlFor="password" className="block text-gray-100">Password</label>
                     <input required
                         type={showPass?'text':'password'}
                         name="password"
                         id="password"
                         placeholder="Password"
-                        className="w-full mb-3 px-4 py-3 cursor-pointer rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                        className="w-full mb-3 px-4 py-3 cursor-pointer rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" />
                     <button onClick={() => setShowPass(!showPass)} className='text-gray-700 absolute  top-9 right-4'>{showPass?<FaEyeSlash size={16}></FaEyeSlash>:<FaEye size={16}></FaEye>}</button>
                     
                 </div>
 
                 {error && <p className='text-sm text-error'>{error}</p>}
 
-                <button type='submit' className="block w-full p-3 text-center rounded-sm cursor-pointer dark:text-gray-50 bg-amber-600">Register</button>
+                <button type='submit' className="block w-full p-3 text-center rounded-sm cursor-pointer text-gray-50 bg-amber-600">Register</button>
                 <div className="flex items-center w-full my-4">
                     <hr className="w-full text-gray-100" />
                     <p className="px-3 text-gray-100">OR</p>
