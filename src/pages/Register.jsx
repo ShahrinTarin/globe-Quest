@@ -24,6 +24,7 @@ const Register = () => {
             .then((result) => {
                 const user = result.user
                 setUser(user)
+                navigate('/')
                 Swal.fire({
                     position: "center",
                     icon: "success",

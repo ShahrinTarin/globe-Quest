@@ -23,10 +23,11 @@ const Login = () => {
     const navigate = useNavigate()
     const handleGoogleLogIn = () => {
         googleLogIn()
-        setError('')
-            .then((result) => {
-                const user = result.user
-                setUser(user)
+        .then((result) => {
+            const user = result.user
+            setUser(user)
+            setError('')
+                
                 Swal.fire({
                     position: "center",
                     icon: "success",
@@ -34,6 +35,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
+                navigate(`${location.state ? location.state : '/'}`)
 
             })
             .catch((error) => {
