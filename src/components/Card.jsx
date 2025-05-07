@@ -18,7 +18,7 @@ const Card = ({card}) => {
 		<p className="text-sm dark:text-gray-600">{description}</p>
 	</div>
 	<div className="flex flex-wrap items-center justify-between">
-		<div className="space-x-2 mb-5 btn btn-outline rounded-3xl font-semibold text-amber-600 text-lg">
+		<div className="space-x-2 md:mb-0 mb-5 btn btn-outline rounded-3xl font-semibold text-amber-600 text-lg">
 			{frequency}
 		</div>
 		<div className="flex space-x-2 text-sm dark:text-gray-600">
