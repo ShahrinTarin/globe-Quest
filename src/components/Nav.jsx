@@ -31,10 +31,6 @@ const Nav = () => {
 
         <li><NavLink className={({ isActive }) =>
             `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-amber-50 text-amber-500' : 'text-gray-700 hover:bg-gray-100'
-            }`} to='/contactus'>Contact Us</NavLink></li>
-
-        <li><NavLink className={({ isActive }) =>
-            `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-amber-50 text-amber-500' : 'text-gray-700 hover:bg-gray-100'
             }`} to='/faq'>FAQ</NavLink></li>
 
         <li><NavLink className={({ isActive }) =>
