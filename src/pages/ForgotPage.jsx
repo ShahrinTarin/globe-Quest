@@ -17,18 +17,14 @@ const ForgotPage = () => {
     const handleResetPassword = (e) => {
         e.preventDefault()
         const email = e.target.email.value
-
         resetPassword(email)
             .then(() => {
-
-
                 Swal.fire({
                     title: "Good Job",
                     text: "We receive your Password Reset request. Check your email for the the reset link",
                     icon: "success"
                 });
                 window.location.href = 'https://gmail.com'
-
             })
             .catch(() => {
                 Swal.fire({
@@ -40,7 +36,6 @@ const ForgotPage = () => {
             });
 
     }
-
     const handleEmailChange = (e) => {
         setEmail(e.target.value); 
       };
