@@ -8,14 +8,14 @@ import { FaEyeSlash } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 const Login = () => {
     const [pageTitle, setPageTitle] = useState('Globe Quest');
-    
-        useEffect(() => {
+
+    useEffect(() => {
         const newTitle = 'LogIn';
-            setPageTitle(newTitle);
-            document.title = newTitle;
-      
-        }, [])
-    const { signIn, setUser, googleLogIn } = use(AuthContext)
+        setPageTitle(newTitle);
+        document.title = newTitle;
+
+    }, [])
+    const { signIn, setUser, googleLogIn, email, setEmail } = use(AuthContext)
 
     const [error, setError] = useState('')
     const [showPass, setShowPass] = useState(false)
@@ -23,11 +23,11 @@ const Login = () => {
     const navigate = useNavigate()
     const handleGoogleLogIn = () => {
         googleLogIn()
-        .then((result) => {
-            const user = result.user
-            setUser(user)
-            setError('')
-                
+            .then((result) => {
+                const user = result.user
+                setUser(user)
+                setError('')
+
                 Swal.fire({
                     position: "center",
                     icon: "success",
@@ -74,6 +74,10 @@ const Login = () => {
 
     }
 
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    }
+
     return (
         <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-gray-600 text-gray-100 mb-5 shadow-2xl">
             <Helmet>
@@ -83,7 +87,8 @@ const Login = () => {
             <form onSubmit={handleLogIn} className="space-y-2">
                 <div className="space-y-1 text-sm">
                     <label htmlFor="email" className="block text-gray-100">Email</label>
-                    <input required type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" />
+                    <input value={email}
+                        onChange={handleEmailChange} required type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" />
                 </div>
                 <div className="space-y-1 text-sm relative">
                     <label htmlFor="password" className="block text-gray-100">Password</label>
