@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const Footer = () => {
     return (
@@ -62,7 +64,9 @@ const Footer = () => {
 			</div>
 		</div>
 	</div>
-	<div className="py-6 text-sm text-center dark:text-gray-600">© <span className='text-amber-500'>Globe</span> Quest All rights reserved.</div>
+	<div className="py-6 text-sm text-center dark:text-gray-600">© <span className='text-amber-500'>Globe</span> Quest All rights reserved. <br />
+	 ©  Design & Developed by <Link to='https://github.com/ShahrinTarin' className='text-amber-500'> ShahrinTarin </Link>  
+	</div>
 </footer>
     );
 };
