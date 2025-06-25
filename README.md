@@ -21,3 +21,51 @@ Globe Quest is a holiday plan subscription box website, similar to "Globe Insigh
 - **react-icons**: Offers a collection of popular icon libraries (e.g., Font Awesome, Material Icons) as React components. Simplifies adding scalable, customizable icons to React apps, enhancing UI with minimal setup.
 
 ---
+
+## 🚀 Setup Instructions
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- MongoDB Atlas account
+- Firebase project with Service Account
+
+### Installation Steps
+
+1. **Clone the repository**
+
+   ```bash
+   git clone <repository-url>
+   cd project-directory
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables** Create a `.env` file in root directory with
+   these variables:
+
+   ```
+   PORT=3000
+   DB_USER=your_mongodb_username
+   DB_PASS=your_mongodb_password
+   JWT_SECRET_KEY=your_jwt_secret
+   FB_SERVICE_KEY=your_firebase_service_account_base64
+   ```
+
+4. **Run the server**
+
+   ```bash
+   npm start
+   # or for development
+   npm run dev
+   ```
+
+5. **Test the server** The server should be running at:
+   ```
+   http://localhost:3000
+   ```
+---
